@@ -33,7 +33,7 @@ export type TArticleItemResponse = {
     SectionShortUrl: string;
 };
 // Изображения для превью статей
-export type TPreviewArticleImages = {
+export type TPreviewArticleImage = {
     Id: number;
     ImageId: number | null; // => TImage.Id
     CDNUrl: string;
@@ -51,7 +51,7 @@ export const enum EArticleImageRelationType {
 	AdvertMobile = 7,
 }
 // Привязка изображений к различным объектам
-export type TImagesRelations = {
+export type TImagesRelation = {
     Id: number;
     ImageId: number;
     RelationType: number;
@@ -62,7 +62,7 @@ export type TImagesRelations = {
     ProjectImageRelationType: number | null;
 };
 // Раздел
-export type TSections = {
+export type TSection = {
     Id: number;
     Order: number | null;
     Title: string;
