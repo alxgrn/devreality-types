@@ -21,6 +21,11 @@ export type TArticle = {
     SEOMeta_Title: string | null;
     UpdatedDate: string;
 };
+// Статья в ответе на запрос отдельной статьи
+export type TArticleResponse = TArticle & {
+    SectionShortUrl: string | null;
+};
+
 // Статья в ответе на запрос списка статей
 export type TArticleItemResponse = {
     Id: number;
@@ -30,7 +35,7 @@ export type TArticleItemResponse = {
     PublishedDate: string | null;
     WideCover: string;
     VertCover: string | null;
-    SectionShortUrl: string;
+    SectionShortUrl: string | null;
 };
 // Изображения для превью статей
 export type TPreviewArticleImage = {
