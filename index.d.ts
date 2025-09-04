@@ -23,6 +23,7 @@ export type TArticle = {
 };
 // Статья в ответе на запрос отдельной статьи
 export type TArticleResponse = TArticle & {
+    WideCover: string;
     SectionShortUrl: string | null;
 };
 
