@@ -1,3 +1,18 @@
+// Пользовательский аккаунт
+export type TUser = {
+    Id: number;
+    Email: string;
+    Password: string | null;
+    IsRoot: boolean;
+    CreatedDate: string;
+    RestoreCode: string;
+};
+// Пользовательская сессия
+export type TSession = {
+    token: string;
+    user: TUser;
+    //profile: TProfile;
+};
 // Изображение
 export type TImage = {
     Id: number;
