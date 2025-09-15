@@ -1,3 +1,4 @@
+
 // Пользовательский аккаунт
 export type TUser = {
     Id: number;
