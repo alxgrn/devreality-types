@@ -47,6 +47,7 @@ export type TArticleResponse = TArticle & {
 export type TArticleItemResponse = {
     Id: number;
     Title: string;
+    Status: number;
     ShortUrl: string;
     UpdatedDate: string;
     PublishedDate: string | null;
