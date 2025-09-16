@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@alxgrn/devreality-types",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "Apache-2.0",
   "description": "Types for DevReality project",
   "homepage": "https://github.com/alxgrn/devreality-types",
