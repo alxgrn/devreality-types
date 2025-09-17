@@ -1,12 +1,13 @@
-
 // Пользовательский аккаунт
 export type TUser = {
-    Id: number;
-    Email: string;
-    Password: string | null;
-    IsRoot: boolean;
-    CreatedDate: string;
-    RestoreCode: string;
+    id: number;
+    email: string;
+    password: string | null;
+    is_root: boolean;
+    is_editor: boolean;
+    is_author: boolean;
+    created_date: string;
+    restore_code: string;
 };
 // Пользовательская сессия
 export type TSession = {
@@ -86,11 +87,11 @@ export type TImagesRelation = {
 };
 // Раздел
 export type TSection = {
-    Id: number;
-    Order: number | null;
-    Title: string;
-    ShortUrl: string;
-    Status: number; // 0|1 - опубликовано или нет
-    PublishedDate: string | null;
-    Type: number;
+    id: number;
+    order: number;
+    title: string;
+    slug: string;
+    status: number; // 0|1 - опубликовано или нет
+    published_date: string | null;
+    type: number;
 };
