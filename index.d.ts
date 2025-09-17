@@ -88,9 +88,9 @@ export type TImagesRelation = {
 // Раздел
 export type TSection = {
     id: number;
-    order: number;
-    title: string;
     slug: string;
+    title: string;
+    weight: number;
     status: number; // 0|1 - опубликовано или нет
     published_date: string | null;
     type: number;
