@@ -17,44 +17,43 @@ export type TSession = {
 };
 // Изображение
 export type TImage = {
-    Id: number;
-    Uploaded: string;
-    FileName: string;
-    OriginUrl: string;
-    S3Prefix: string;
+    id: number;
+    url: string;
+    prefix: string;
+    uploaded: string;
+    filename: string;
 };
 // Статья
 export type TArticle = {
-    Id: number;
-    ShortContent: string | null;
-    Content: string;
-    CreatedDate: string;
-    SystemTags: number[] | null;
-    Title: string;
-    ShortUrl: string;
-    Status: number;
-    PublishedDate: string | null;
-    SEOMeta_Description: string | null;
-    SEOMeta_Title: string | null;
-    UpdatedDate: string;
+    id: number;
+    slug: string;
+    title: string;
+    short: string | null;
+    content: string;
+    status: number;
+    seo_title: string | null;
+    seo_descr: string | null;
+    system_tags: number[] | null;
+    created_date: string;
+    updated_date: string;
+    published_date: string | null;
 };
 // Статья в ответе на запрос отдельной статьи
 export type TArticleResponse = TArticle & {
-    WideCover: string;
-    SectionShortUrl: string | null;
+    cover: string;
+    section_slug: string | null;
 };
-
 // Статья в ответе на запрос списка статей
 export type TArticleItemResponse = {
-    Id: number;
-    Title: string;
-    Status: number;
-    ShortUrl: string;
-    UpdatedDate: string;
-    PublishedDate: string | null;
-    WideCover: string;
-    VertCover: string | null;
-    SectionShortUrl: string | null;
+    id: number;
+    slug: string;
+    title: string;
+    status: number;
+    updated_date: string;
+    published_date: string | null;
+    wide_cover: string;
+    vert_cover: string | null;
+    section_slug: string | null;
 };
 // Изображения для превью статей
 export type TPreviewArticleImage = {
@@ -76,14 +75,12 @@ export const enum EArticleImageRelationType {
 }
 // Привязка изображений к различным объектам
 export type TImagesRelation = {
-    Id: number;
-    ImageId: number;
-    RelationType: number;
-    AdvertId: number | null;
-    ArticleId: number | null;
-    ArticleImageRelationType: EArticleImageRelationType | null;
-    ProjectId: number | null;
-    ProjectImageRelationType: number | null;
+    id: number;
+    image_id: number;
+    relation_type: number;
+    advert_id: number | null;
+    article_id: number | null;
+    article_image_relation_type: EArticleImageRelationType | null;
 };
 // Раздел
 export type TSection = {
