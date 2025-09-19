@@ -23,14 +23,20 @@ export type TImage = {
     uploaded: string;
     filename: string;
 };
+// Виды статусов статей
+export const enum EArticleStatus {
+	Draft = 0,
+	Published = 1,
+}
 // Статья
 export type TArticle = {
     id: number;
     slug: string;
     title: string;
     short: string | null;
+    format: 'html'|'prose';
     content: string;
-    status: number;
+    status: EArticleStatus;
     seo_title: string | null;
     seo_descr: string | null;
     system_tags: number[] | null;
@@ -82,13 +88,18 @@ export type TImagesRelation = {
     article_id: number | null;
     article_image_relation_type: EArticleImageRelationType | null;
 };
+// Виды статусов раздела
+export const enum ESectionStatus {
+	Draft = 0,
+	Published = 1,
+}
 // Раздел
 export type TSection = {
     id: number;
     slug: string;
     title: string;
     weight: number;
-    status: number; // 0|1 - опубликовано или нет
+    status: ESectionStatus;
     published_date: string | null;
     type: number;
 };
