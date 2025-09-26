@@ -47,7 +47,7 @@ export type TArticle = {
 // Статья в ответе на запрос отдельной статьи
 export type TArticleResponse = TArticle & {
     cover: string | null;
-    section_slug: string | null;
+    sections: number[];
 };
 // Статья в ответе на запрос списка статей
 export type TArticleItemResponse = {
